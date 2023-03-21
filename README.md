@@ -1,5 +1,16 @@
 # KS-X-1001-Hanja
+
 KS X 1001:2004 규격에서 한자 데이터에 대한 리스트를 생성합니다.
+
+## env
+
+* python 3.10.4
+
+## run
+
+```
+python run.py
+```
 
 ## Reference
 
