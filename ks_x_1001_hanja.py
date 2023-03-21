@@ -22,6 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
+from ast import literal_eval
+
 
 class KsX1001HanjaVariable:
     """KS X 1001:2004 규격에서 지정해놓은 인코딩 범위를 지정해놓은 클래스입니다."""
