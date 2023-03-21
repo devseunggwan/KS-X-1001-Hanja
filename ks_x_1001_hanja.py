@@ -126,8 +126,12 @@ class KsX1001Hanja(KsX1001HanjaVariable):
                     for ks_x_1001_4 in self.list_ks_x_1001_4:
                         hanja = f'b"\\x{ks_x_1001_1}{kx_x_1001_2}\\x{ks_x_1001_3}{ks_x_1001_4}"'
                         hanja = literal_eval(hanja)
-                        hanja = hanja.decode("euc-kr")
-                        self.ks_x_1001_hanja.append(hanja)
+
+                        try:
+                            hanja = hanja.decode("euc-kr")
+                            self.ks_x_1001_hanja.append(hanja)
+                        except UnicodeDecodeError:
+                            pass
 
         self.write_text(path_output=path_output, texts=self.ks_x_1001_hanja)
 
